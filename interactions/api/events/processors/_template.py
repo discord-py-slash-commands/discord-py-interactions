@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     from interactions.client.smart_cache import GlobalCache
     from interactions.api.events.internal import BaseEvent
 
-__all__ = ("Processor", "EventMixinTemplate")
+__all__ = ("EventMixinTemplate", "Processor")
 
 
 class Processor:

@@ -6,7 +6,7 @@ from attr import Attribute
 
 from interactions.client.const import MISSING, get_logger
 
-__all__ = ("define", "field", "docs", "str_validator")
+__all__ = ("define", "docs", "field", "str_validator")
 
 
 class_defaults = {

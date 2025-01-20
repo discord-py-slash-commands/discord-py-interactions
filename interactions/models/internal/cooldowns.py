@@ -11,11 +11,11 @@ __all__ = (
     "Buckets",
     "Cooldown",
     "CooldownSystem",
-    "SlidingWindowSystem",
     "ExponentialBackoffSystem",
     "LeakyBucketSystem",
-    "TokenBucketSystem",
     "MaxConcurrency",
+    "SlidingWindowSystem",
+    "TokenBucketSystem",
 )
 
 
@@ -75,7 +75,7 @@ class CooldownSystem:
 
     """
 
-    __slots__ = "rate", "interval", "opened", "_tokens"
+    __slots__ = "_tokens", "interval", "opened", "rate"
 
     def __init__(self, rate: int, interval: float) -> None:
         self.rate: int = rate
@@ -160,7 +160,7 @@ class SlidingWindowSystem(CooldownSystem):
 
     """
 
-    __slots__ = "rate", "interval", "timestamps"
+    __slots__ = "interval", "rate", "timestamps"
 
     def __init__(self, rate: int, interval: float) -> None:
         self.rate: int = rate
@@ -323,7 +323,7 @@ class Cooldown:
 
     """
 
-    __slots__ = "bucket", "cooldown_repositories", "rate", "interval", "cooldown_system"
+    __slots__ = "bucket", "cooldown_repositories", "cooldown_system", "interval", "rate"
 
     def __init__(
         self,

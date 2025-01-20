@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.snowflake import Snowflake_Type, SnowflakeObject
     from interactions.client import Client
 
-__all__ = ("TeamMember", "Team")
+__all__ = ("Team", "TeamMember")
 
 
 @attrs.define(eq=False, order=False, hash=False, kw_only=True)

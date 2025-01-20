@@ -10,7 +10,7 @@ from typing import Any
 
 import attr
 
-__all__ = ["Encoder", "Decoder"]
+__all__ = ["Decoder", "Encoder"]
 
 from interactions.client.const import MISSING, get_logger
 

@@ -4,7 +4,7 @@ from typing import BinaryIO, Optional, Union
 
 import attrs
 
-__all__ = ("File", "open_file", "UPLOADABLE_TYPE")
+__all__ = ("UPLOADABLE_TYPE", "File", "open_file")
 
 
 @attrs.define(eq=False, order=False, hash=False, kw_only=False)

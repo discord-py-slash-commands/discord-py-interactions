@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.user import User
     from interactions.models.discord.snowflake import Snowflake_Type
 
-__all__ = ("StickerItem", "Sticker", "StickerPack")
+__all__ = ("Sticker", "StickerItem", "StickerPack")
 
 
 @attrs.define(eq=False, order=False, hash=False, kw_only=False)

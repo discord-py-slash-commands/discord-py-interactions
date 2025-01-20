@@ -5,7 +5,7 @@ from interactions.models.discord.snowflake import Snowflake_Type, to_snowflake
 from interactions.models.discord.user import Member
 from interactions.models.internal.context import BaseContext
 
-__all__ = ("has_role", "has_any_role", "has_id", "is_owner", "guild_only", "dm_only")
+__all__ = ("dm_only", "guild_only", "has_any_role", "has_id", "has_role", "is_owner")
 
 TYPE_CHECK_FUNCTION = Callable[[BaseContext], Awaitable[bool]]
 

@@ -7,7 +7,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Union, Optional, TYPE_CHECKING
 
-__all__ = ("AudioBuffer", "BaseAudio", "Audio", "AudioVolume", "RawInputAudio")
+__all__ = ("Audio", "AudioBuffer", "AudioVolume", "BaseAudio", "RawInputAudio")
 
 from interactions.client.const import get_logger
 from interactions.api.voice.opus import Encoder

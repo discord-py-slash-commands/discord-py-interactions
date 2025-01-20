@@ -5,7 +5,7 @@ from typing import Any, Callable, Generic, Iterator, Optional, Tuple, TypeVar
 
 import attrs
 
-__all__ = ("TTLItem", "TTLCache", "NullCache")
+__all__ = ("NullCache", "TTLCache", "TTLItem")
 
 KT = TypeVar("KT")
 VT = TypeVar("VT")

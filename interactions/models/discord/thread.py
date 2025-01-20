@@ -23,12 +23,12 @@ if TYPE_CHECKING:
     from interactions import UPLOADABLE_TYPE, GuildForum
 
 __all__ = (
-    "ThreadMember",
-    "ThreadList",
-    "ThreadTag",
     "DefaultReaction",
-    "process_thread_tag",
+    "ThreadList",
+    "ThreadMember",
+    "ThreadTag",
     "process_default_reaction",
+    "process_thread_tag",
 )
 
 

@@ -101,14 +101,13 @@ from .internal import (
 from .base import BaseEvent, GuildEvent, RawGatewayEvent
 
 __all__ = (
-    "processors",
     "ApplicationCommandPermissionsUpdate",
-    "AutocompleteCompletion",
-    "AutocompleteError",
     "AutoModCreated",
     "AutoModDeleted",
     "AutoModExec",
     "AutoModUpdated",
+    "AutocompleteCompletion",
+    "AutocompleteError",
     "BanCreate",
     "BanRemove",
     "BaseEvent",
@@ -141,8 +140,8 @@ __all__ = (
     "GuildLeft",
     "GuildMembersChunk",
     "GuildScheduledEventCreate",
-    "GuildScheduledEventUpdate",
     "GuildScheduledEventDelete",
+    "GuildScheduledEventUpdate",
     "GuildScheduledEventUserAdd",
     "GuildScheduledEventUserRemove",
     "GuildStickersUpdate",
@@ -188,8 +187,8 @@ __all__ = (
     "ThreadCreate",
     "ThreadDelete",
     "ThreadListSync",
-    "ThreadMembersUpdate",
     "ThreadMemberUpdate",
+    "ThreadMembersUpdate",
     "ThreadUpdate",
     "TypingStart",
     "VoiceStateUpdate",
@@ -200,4 +199,5 @@ __all__ = (
     "VoiceUserMute",
     "WebhooksUpdate",
     "WebsocketReady",
+    "processors",
 )

@@ -16,7 +16,7 @@ from interactions.models.discord.snowflake import (
     to_snowflake_list,
 )
 
-__all__ = ("OnboardingPromptOption", "OnboardingPrompt", "Onboarding")
+__all__ = ("Onboarding", "OnboardingPrompt", "OnboardingPromptOption")
 
 
 @attrs.define(eq=False, order=False, hash=False, kw_only=True)

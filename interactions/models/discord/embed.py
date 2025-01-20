@@ -21,13 +21,13 @@ from interactions.models.discord.enums import EmbedType
 from interactions.models.discord.timestamp import Timestamp
 
 __all__ = (
-    "EmbedField",
-    "EmbedAuthor",
+    "Embed",
     "EmbedAttachment",
     "EmbedAuthor",
+    "EmbedAuthor",
+    "EmbedField",
     "EmbedFooter",
     "EmbedProvider",
-    "Embed",
     "process_embeds",
 )
 

@@ -30,7 +30,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.poll import Poll
     from interactions.models.discord.sticker import Sticker
 
-__all__ = ("WebhookTypes", "Webhook")
+__all__ = ("Webhook", "WebhookTypes")
 
 
 class WebhookTypes(IntEnum):

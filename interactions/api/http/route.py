@@ -6,7 +6,7 @@ from interactions.client.const import __api_version__
 if TYPE_CHECKING:
     from interactions.models.discord.snowflake import Snowflake_Type
 
-__all__ = ("Route", "PAYLOAD_TYPE")
+__all__ = ("PAYLOAD_TYPE", "Route")
 
 PAYLOAD_TYPE = dict[str, int | str | bool | list | None]
 

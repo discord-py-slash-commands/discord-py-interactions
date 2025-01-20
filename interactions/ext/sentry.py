@@ -23,7 +23,7 @@ except ModuleNotFoundError:
 
 from interactions import Client, Extension, listen
 
-__all__ = ("setup", "default_sentry_filter")
+__all__ = ("default_sentry_filter", "setup")
 
 
 def default_sentry_filter(event: dict[str, Any], hint: dict[str, Any]) -> Optional[dict[str, Any]]:
