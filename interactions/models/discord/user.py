@@ -30,7 +30,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.channel import DM, TYPE_GUILD_CHANNEL
     from interactions.models.discord.voice_state import VoiceState
 
-__all__ = ("BaseUser", "User", "ClientUser", "Member")
+__all__ = ("BaseUser", "ClientUser", "Member", "User")
 
 
 class _SendDMMixin(SendMixin):

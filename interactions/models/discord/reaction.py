@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from interactions.models import Message, TYPE_ALL_CHANNEL
     from interactions.models.discord.user import User
 
-__all__ = ("ReactionUsers", "Reaction")
+__all__ = ("Reaction", "ReactionUsers")
 
 
 class ReactionUsers(AsyncIterator):

@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.user import Member
     from interactions.models.discord.snowflake import Snowflake_Type
 
-__all__ = ("VoiceState", "VoiceRegion")
+__all__ = ("VoiceRegion", "VoiceState")
 
 
 @attrs.define(eq=False, order=False, hash=False, kw_only=True)

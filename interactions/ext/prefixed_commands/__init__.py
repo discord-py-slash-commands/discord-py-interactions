@@ -6,13 +6,13 @@ from .manager import PrefixedInjectedClient, PrefixedManager, setup
 from .utils import when_mentioned, when_mentioned_or
 
 __all__ = (
-    "prefixed_command",
     "PrefixedCommand",
     "PrefixedCommandParameter",
     "PrefixedContext",
     "PrefixedHelpCommand",
     "PrefixedInjectedClient",
     "PrefixedManager",
+    "prefixed_command",
     "setup",
     "when_mentioned",
     "when_mentioned_or",

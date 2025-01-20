@@ -37,8 +37,8 @@ if TYPE_CHECKING:
     from .context import PrefixedContext
 
 __all__ = (
-    "PrefixedCommandParameter",
     "PrefixedCommand",
+    "PrefixedCommandParameter",
     "prefixed_command",
 )
 
@@ -54,17 +54,17 @@ class PrefixedCommandParameter:
     """
 
     __slots__ = (
-        "name",
-        "default",
-        "type",
-        "kind",
-        "converters",
-        "greedy",
-        "union",
-        "variable",
         "consume_rest",
         "consume_rest_class",
+        "converters",
+        "default",
+        "greedy",
+        "kind",
+        "name",
         "no_argument",
+        "type",
+        "union",
+        "variable",
     )
 
     name: str

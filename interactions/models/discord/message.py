@@ -56,19 +56,19 @@ if TYPE_CHECKING:
     from interactions.client import Client
 
 __all__ = (
+    "AllowedMentions",
     "Attachment",
+    "BaseMessage",
     "ChannelMention",
+    "Message",
     "MessageActivity",
-    "MessageReference",
     "MessageInteraction",
     "MessageInteractionMetadata",
-    "AllowedMentions",
-    "BaseMessage",
-    "Message",
+    "MessageReference",
     "MessageType",
     "process_allowed_mentions",
-    "process_message_reference",
     "process_message_payload",
+    "process_message_reference",
 )
 
 channel_mention = re.compile(r"<#(?P<id>[0-9]{17,})>")

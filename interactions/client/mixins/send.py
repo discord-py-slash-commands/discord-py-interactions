@@ -98,8 +98,7 @@ class SendMixin:
                 isinstance(files, Iterable)
                 and any(isinstance(file, interactions.models.discord.message.Attachment) for file in files)
             )
-            or isinstance(files, interactions.models.discord.message.Attachment)
-        ):
+        ) or isinstance(files, interactions.models.discord.message.Attachment):
             raise ValueError(
                 "Attachments are not files. Attachments only contain metadata about the file, not the file itself - to send an attachment, you need to download it first. Check Attachment.url"
             )

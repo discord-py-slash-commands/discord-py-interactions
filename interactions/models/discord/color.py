@@ -7,17 +7,17 @@ import attrs
 
 __all__ = (
     "COLOR_TYPES",
-    "Color",
     "BrandColors",
-    "MaterialColors",
-    "FlatUIColors",
-    "RoleColors",
-    "process_color",
-    "Colour",
     "BrandColours",
-    "MaterialColours",
+    "Color",
+    "Colour",
+    "FlatUIColors",
     "FlatUIColours",
+    "MaterialColors",
+    "MaterialColours",
+    "RoleColors",
     "RoleColours",
+    "process_color",
     "process_colour",
 )
 

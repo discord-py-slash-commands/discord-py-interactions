@@ -15,11 +15,14 @@ from .auto_mod import AutoModEvents
 from .entitlement_events import EntitlementEvents
 
 __all__ = (
+    "AutoModEvents",
     "ChannelEvents",
+    "EntitlementEvents",
     "GuildEvents",
     "IntegrationEvents",
     "MemberEvents",
     "MessageEvents",
+    "Processor",
     "ReactionEvents",
     "RoleEvents",
     "ScheduledEvents",
@@ -27,7 +30,4 @@ __all__ = (
     "ThreadEvents",
     "UserEvents",
     "VoiceEvents",
-    "Processor",
-    "AutoModEvents",
-    "EntitlementEvents",
 )

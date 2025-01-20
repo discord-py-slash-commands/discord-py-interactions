@@ -20,7 +20,7 @@ if TYPE_CHECKING:
     from interactions.models.discord.role import Role
     from interactions.models.discord.snowflake import Snowflake_Type
 
-__all__ = ("PartialEmoji", "CustomEmoji", "process_emoji_req_format", "process_emoji")
+__all__ = ("CustomEmoji", "PartialEmoji", "process_emoji", "process_emoji_req_format")
 
 emoji_regex = re.compile(r"<?(a)?:(\w*):(\d*)>?")
 unicode_emoji_reg = re.compile(r"[^\w\s,’‘“”…–—•◦‣⁃⁎⁏⁒⁓⁺⁻⁼⁽⁾ⁿ₊₋₌₍₎]")  # noqa: RUF001

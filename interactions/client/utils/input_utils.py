@@ -10,7 +10,7 @@ import aiohttp  # type: ignore
 from interactions.client.const import get_logger
 import importlib.util
 
-__all__ = ("FastJson", "response_decode", "get_args", "get_first_word", "unpack_helper")
+__all__ = ("FastJson", "get_args", "get_first_word", "response_decode", "unpack_helper")
 
 json_mode = "builtin"
 
