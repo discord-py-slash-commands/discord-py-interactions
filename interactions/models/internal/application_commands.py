@@ -250,7 +250,7 @@ class InteractionCommand(BaseCommand):
     )
     nsfw: bool = attrs.field(repr=False, default=False, metadata=docs("This command should only work in NSFW channels"))
     integration_types: list[Union[IntegrationType, int]] = attrs.field(
-        factory=lambda: [IntegrationType.GUILD_INSTALL],
+        factory=list,
         repr=False,
         metadata=docs("Installation context(s) where the command is available, only for globally-scoped commands."),
     )

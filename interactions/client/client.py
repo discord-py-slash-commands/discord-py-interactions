@@ -28,6 +28,7 @@ from typing import (
     Awaitable,
     Tuple,
     TypeVar,
+    cast,
     overload,
 )
 
@@ -96,6 +97,7 @@ from interactions.models.discord.enums import (
     ComponentType,
     Intents,
     InteractionType,
+    IntegrationType,
     Status,
     MessageFlags,
 )
@@ -296,6 +298,7 @@ class Client(
         component_context: Type[BaseContext] = ComponentContext,
         context_menu_context: Type[BaseContext] = ContextMenuContext,
         debug_scope: Absent["Snowflake_Type"] = MISSING,
+        default_integration_types: Absent[list[IntegrationType]] = MISSING,
         delete_unused_application_cmds: bool = False,
         disable_dm_commands: bool = False,
         enforce_interaction_perms: bool = True,
@@ -356,6 +359,9 @@ class Client(
         self.auto_defer = auto_defer
         """A system to automatically defer commands after a set duration"""
         self.intents = intents if isinstance(intents, Intents) else Intents(intents)
+        self.default_integration_types = cast(list[IntegrationType], default_integration_types) or [
+            IntegrationType.GUILD_INSTALL
+        ]
 
         # resources
         if isinstance(proxy_auth, tuple):
@@ -1364,7 +1370,7 @@ class Client(
                 c_listener for c_listener in self.listeners[listener.event] if not c_listener.is_default_listener
             ]
 
-    def add_interaction(self, command: InteractionCommand) -> bool:
+    def add_interaction(self, command: InteractionCommand) -> bool:  # noqa: C901
         """
         Add a slash command to the client.
 
@@ -1377,6 +1383,9 @@ class Client(
 
         if self.disable_dm_commands:
             command.dm_permission = False
+
+        if not command.integration_types:
+            command.integration_types = list(self.default_integration_types)
 
         # for SlashCommand objs without callback (like objects made to hold group info etc)
         if command.callback is None:
